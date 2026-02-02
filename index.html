@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Plan</title>
+
+<style>
+body{
+    background:#e6f7ff;
+    font-family: Arial;
+    text-align:center;
+}
+
+/* upar wali image */
+.top-img{
+    width:100px;
+    margin-bottom:10px;
+}
+
+.box{
+    width:350px;
+    background:white;
+    padding:20px;
+    margin:80px auto;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
+    position:relative;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#yes{
+    background:#2196f3;
+    color:white;
+}
+
+#no{
+    background:#ddd;
+    position:absolute;
+}
+
+#gift{
+    display:none;
+    margin-top:20px;
+    font-size:22px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <!-- YAHAN IMAGE ADD KI HAI -->
+    <img src="cute.png" class="top-img">
+
+    <!-- <h2>Will you go for a movie with me? 🍿</h2> -->
+    <h2>Hello</h2>
+
+    <button id="yes" onclick="showGift()">Yes</button>
+    <button id="no" onmouseover="moveNo()">No</button>
+
+    <div id="gift">
+        <h1>Yay! Movie pakki 😍</h1>
+        <p>Popcorn meri taraf se 🍿</p>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200">
+    </div>
+
+</div>
+
+<script>
+function moveNo(){
+    let btn = document.getElementById("no");
+
+    let x = Math.random()*250;
+    let y = Math.random()*150;
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+
+function showGift(){
+    document.getElementById("gift").style.display="block";
+}
+</script>
+
+</body>
+</html>
